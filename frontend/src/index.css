@@ -1,0 +1,47 @@
+:root {
+  font-family: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif;
+  --heading: Georgia, "Times New Roman", serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  color: #294235;
+  background: #f3efe3;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: #f3efe3;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+::selection {
+  color: #fffaf0;
+  background: #294235;
+}
+
+:focus-visible {
+  outline: 3px solid #b94f35;
+  outline-offset: 3px;
+}

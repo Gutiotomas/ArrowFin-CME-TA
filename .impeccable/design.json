@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T18:16:29Z",
+  "title": "Design System: ArrowFin CME Candle Chart",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Mineral Paper",
+        "canonical": "#f3efe3",
+        "tonalRamp": [
+          "#e7e0d0",
+          "#ede7d7",
+          "#f3efe3",
+          "#f8f6ef",
+          "#fdfbf7",
+          "#fffaf0",
+          "#f6f2e7",
+          "#e9e5d7"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Fir Green Ink",
+        "canonical": "#294235",
+        "tonalRamp": [
+          "#1b2b22",
+          "#21372c",
+          "#294235",
+          "#3a5647",
+          "#4d6759",
+          "#5c7767",
+          "#7a8e83",
+          "#a6b6a8"
+        ]
+      },
+      "accent": {
+        "role": "primary-highlight",
+        "displayName": "Oxide Accent",
+        "canonical": "#b94f35",
+        "tonalRamp": [
+          "#6d2a1d",
+          "#7f3022",
+          "#8d3926",
+          "#a4432d",
+          "#b94f35",
+          "#c35e42",
+          "#d58c6f",
+          "#e6b59d"
+        ]
+      },
+      "green-line": {
+        "role": "support",
+        "displayName": "Chart Line Green",
+        "canonical": "#496a50",
+        "tonalRamp": [
+          "#2e4335",
+          "#395943",
+          "#496a50",
+          "#577f62",
+          "#6e9682",
+          "#87a69e",
+          "#b7c7bf",
+          "#dfeae4"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Editorial Heading",
+        "purpose": "Page title and chart titles only."
+      },
+      "body": {
+        "displayName": "Avenir Next UI",
+        "purpose": "Selectors, labels, and body text."
+      },
+      "mono": {
+        "displayName": "Tabular Mono",
+        "purpose": "Session metadata, measurements, and chart timings."
+      }
+    },
+    "shadows": [
+      {
+        "name": "paper-flat",
+        "value": "none",
+        "purpose": "Separation is carried by 1px rules, not raised shadows."
+      }
+    ],
+    "motion": [
+      {
+        "name": "guide-arrive",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Last-close guide and point appear with a brief, controlled transition; reduced motion makes it immediate."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "desktop",
+        "value": "1292px"
+      },
+      {
+        "name": "mobile",
+        "value": "720px"
+      },
+      {
+        "name": "compact",
+        "value": "390px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Wordmark",
+      "kind": "nav",
+      "refersTo": "header-wordmark",
+      "description": "Compact uppercase header mark for the ArrowFin trading record.",
+      "html": "<a class=\"ds-wordmark\" href=\"/\">ARROWFIN <span>/</span> MARKET DATA</a>",
+      "css": ".ds-wordmark { color: #294235; text-decoration: none; font-family: \"SFMono-Regular\", Consolas, \"Liberation Mono\", monospace; font-size: 0.76rem; font-weight: 750; letter-spacing: 0.12em; } .ds-wordmark span { color: #b94f35; }"
+    },
+    {
+      "name": "Select Field",
+      "kind": "input",
+      "refersTo": "select-field",
+      "description": "Readable web select for contract and timeframe choice.",
+      "html": "<label class=\"ds-field\"><span>Contrato</span><select><option>MES</option><option>NQ</option></select></label>",
+      "css": ".ds-field { display: grid; gap: 5px; color: #59685d; font-family: \"SFMono-Regular\", Consolas, \"Liberation Mono\", monospace; font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; } .ds-field select { min-height: 40px; padding: 0 32px 0 11px; border: 1px solid #bcbcae; border-radius: 3px; background: #f8f6ef; color: #294235; font: inherit; font-size: 0.9rem; } .ds-field select:focus-visible { outline: 3px solid #b94f35; outline-offset: 3px; }"
+    },
+    {
+      "name": "Metric Card",
+      "kind": "card",
+      "refersTo": "metric-card",
+      "description": "Session stat tile for latest close, high, low, and volume.",
+      "html": "<article class=\"ds-metric\"><span>Último cierre</span><strong>32.460</strong></article>",
+      "css": ".ds-metric { min-width: 0; padding: 13px 15px 14px; border: 1px solid #d1cdbc; border-radius: 4px; background: #f8f6ef; } .ds-metric span { display: block; color: #59685d; font-family: \"SFMono-Regular\", Consolas, \"Liberation Mono\", monospace; font-size: 0.65rem; letter-spacing: 0.07em; text-transform: uppercase; } .ds-metric strong { display: block; margin-top: 7px; color: #294235; font-family: \"SFMono-Regular\", Consolas, \"Liberation Mono\", monospace; font-size: 1.35rem; font-variant-numeric: tabular-nums; font-weight: 550; }"
+    },
+    {
+      "name": "Chart Panel",
+      "kind": "custom",
+      "refersTo": "chart-panel",
+      "description": "Wide close-price chart framed like a worksheet panel with a thin-rule caption area.",
+      "html": "<figure class=\"ds-chart-panel\"><figcaption class=\"ds-chart-head\"><div><h2>Precio de cierre</h2><p>MES · velas de 5m · precios en puntos</p></div><span class=\"ds-legend\"><i></i>Cierre</span></figcaption><svg class=\"ds-chart\" viewBox=\"0 0 800 220\" aria-label=\"Price chart\"><polyline points=\"20,180 140,160 280,110 420,140 600,70 760,40\"/></svg></figure>",
+      "css": ".ds-chart-panel { margin: 0; padding: 21px 23px 13px; border: 1px solid #d1cdbc; border-radius: 4px; background: #f8f6ef; } .ds-chart-head { display: flex; align-items: start; justify-content: space-between; gap: 16px; } .ds-chart-head h2 { margin: 0; color: #294235; font-family: Georgia, \"Times New Roman\", serif; font-size: 1.08rem; font-weight: 500; letter-spacing: -0.01em; } .ds-chart-head p { margin-top: 5px; color: #59685d; font-family: \"SFMono-Regular\", Consolas, \"Liberation Mono\", monospace; font-size: 0.69rem; font-variant-numeric: tabular-nums; } .ds-legend { display: inline-flex; align-items: center; gap: 7px; color: #59685d; font-family: \"SFMono-Regular\", Consolas, \"Liberation Mono\", monospace; font-size: 0.7rem; } .ds-legend i { width: 8px; height: 8px; border-radius: 50%; background: #496a50; display: inline-block; } .ds-chart { display: block; width: 100%; height: 220px; margin-top: 10px; } .ds-chart polyline { fill: none; stroke: #496a50; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.5; }"
+    },
+    {
+      "name": "Retry Button",
+      "kind": "button",
+      "refersTo": "retry-button",
+      "description": "Error-recovery action with oxide emphasis and minimal framing.",
+      "html": "<button class=\"ds-retry\" type=\"button\">Reintentar consulta</button>",
+      "css": ".ds-retry { min-height: 38px; padding: 0 13px; border: 1px solid #8d3926; border-radius: 3px; background: transparent; color: #8d3926; font: inherit; font-size: 0.82rem; cursor: pointer; } .ds-retry:hover { background: #f1ddd5; } .ds-retry:focus-visible { outline: 3px solid #b94f35; outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Cuaderno de levantamiento",
+    "overview": "This interface reads like a paper ledger for a synthetic market session: warm mineral paper, fir-green ink, and a single oxide accent that marks the active value under review. Loading, empty, and error states remain explicit, while the last close is presented as a measured point instead of a generic dashboard dot.",
+    "keyCharacteristics": [
+      "Warm paper field and fir-green ink form the default reading environment.",
+      "Oxide accent is reserved for active values, selections, and recovery actions.",
+      "The chart uses thin rules and monospaced numeric alignment to keep measurements precise.",
+      "The guide to the latest close is a functional measurement cue, not a decorative tooltip."
+    ],
+    "rules": [
+      {
+        "name": "The Paper Rule",
+        "body": "Use the warm paper field as the default surface and reserve oxide for selected points, active values, and direct action states; keep the overall interface flat and legible rather than glossy or ornamental.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ledger Rule",
+        "body": "Numeric precision is structural: times, prices, and session totals use tabular figures so the reading preserves alignment across candle counts and values.",
+        "section": "typography"
+      },
+      {
+        "name": "The Measure Rule",
+        "body": "Keep the evaluator's path short and explicit: query controls, summary metrics, then chart. The chart is the final authority, while the top bar and labels provide context rather than decoration.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Ledger Rule",
+        "body": "Surfaces remain nearly flush: no broad shadows, no glossy overlays, no faux metal or dashboard chrome. The paper stock and the rule lines carry separation instead.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Guide Rule",
+        "body": "The last close is the active datum. Connect it visibly to its exact price label; the line should feel like a measurement, not a tooltip garnish.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do keep the warm paper field and fir-green ink as the default reading environment.",
+      "Do use oxide for the active point, selection state, and only the most important action cue.",
+      "Do keep loading, empty, and error states explicit and readable."
+    ],
+    "donts": [
+      "Don't switch the system to glossy dashboard chrome, soft shadows, or generic neutral UI surfaces.",
+      "Don't use serif body copy or display typography as a general override; the world stays editorial only in headings.",
+      "Don't hide the synthetic backend state behind decorative language or vague status messaging."
+    ]
+  }
+}
