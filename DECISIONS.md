@@ -24,7 +24,7 @@ Acepté la corrección.
 
 6. Crea el README.md donde respondas How to run the backend, the frontend and the tests, in 3 commands or fewer.
 
-Acepté los pasos
+Acepté los pasos descritos.
 
 # Decisions
 
