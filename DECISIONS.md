@@ -24,7 +24,11 @@ Acepté la corrección.
 
 6. Crea el README.md donde respondas How to run the backend, the frontend and the tests, in 3 commands or fewer.
 
-Acepté los pasos descritos.
+Acepté lo creado, pero faltaban completar unas instrucciones.
+
+7. Como el .zip y el git clone no tienen los node modules, hay que realizar las correcciones al readme para incluir eso.
+
+Acepté lo creado.
 
 # Decisions
 
